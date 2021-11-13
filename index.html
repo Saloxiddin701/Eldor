@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eldor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="home">
+    <div class="row">
+        <div class="item">
+            <div class="navbar">
+                <div class="nav-logo">
+                    <img src="img/logologo.png" alt="logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">Team</a></li>
+                        <li><a href="">Club</a></li>
+                        <li><a href="">Shop</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="eldor-img">
+                <h1>ELDOR</h1>
+                <img src="img/eldoreldor.png" alt="eldor" class="eldor">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="row">
+        <div class="about-page">
+            <img src="img/gettyimages-1229878838%203.png" alt="get">
+            <div class="title">
+                <h1>Eldor</h1>
+                <span class="shom">Shomurodov</span>
+                <div class="info">
+                    <div class="born">
+                        <h2>Born</h2>
+                        <span class="txt">1995y</span>
+                    </div>
+                    <div class="born">
+                        <h2>Country</h2>
+                        <span class="txt">Uzbekistan</span>
+                    </div>
+                    <div class="born">
+                        <h2>Position</h2>
+                        <span class="txt">Striker</span>
+                    </div>
+                </div>
+                <div class="clubs">
+                    <h2>Previous clubs</h2>
+                    <img src="img/Group%205clubs_logo.png" alt="club">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="video">
+    <div class="row">
+        <iframe width="920" height="520" src="https://www.youtube.com/embed/8PzOsxbVO0Q" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy Made by SaloxDeveloper | 2021</p>
+</footer>
+
+<script>
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".navbar");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+</script>
+</body>
+</html>
