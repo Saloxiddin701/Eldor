@@ -58,6 +58,19 @@ nav ul li a {
     font-size: 22px;
 }
 
+.hamburger {
+    display: none;
+}
+
+.bars {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all .5s ease-in-out;
+    background: white;
+}
+
 .home .eldor-img {
     position: absolute;
     font-size: 150px;
@@ -66,19 +79,6 @@ nav ul li a {
     color: #fff;
     text-align: center;
     letter-spacing: 15px;
-}
-
-.eldor-img h1 {
-    animation: change 0.5s infinite;
-}
-
-@keyframes change {
-    from{
-        width: 0;
-    }
-    to{
-        width: 100%;
-    }
 }
 
 .eldor-img .eldor {
@@ -177,4 +177,61 @@ nav ul li a {
     font-size: 25px;
     text-align: center;
     margin-top: 15px;
+}
+
+@media screen and (max-width: 768px){
+    .nav-menu {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        display: flex;
+        flex-direction: column;
+        background: #2E2E2E;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-menu li {
+        padding: 50px 0;
+    }
+    .nav-menu.active {
+        top: 0;
+        left: 0;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bars:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bars:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bars:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /*.home {*/
+    /*    width: 767px;*/
+    /*}*/
+    /*.eldor-img h1 {*/
+    /*    font-size: 150px;*/
+    /*    letter-spacing: 0;*/
+    /*}*/
+    /*.eldor-img .eldor {*/
+    /*    left: 35%;*/
+    /*    top: 120%;*/
+    /*    transform: translate(-50%, -50%);*/
+    /*    height: 518px;*/
+    /*}*/
+    /*.about-page {*/
+    /*    width: 768px;*/
+    /*    display: flex;*/
+    /*    flex-wrap: wrap;*/
+    /*}*/
+    /*.about-page .title {*/
+    /*    display: flex;*/
+    /*    flex-wrap: wrap;*/
+    /*}*/
 }

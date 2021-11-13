@@ -17,11 +17,16 @@
                     <img src="img/logologo.png" alt="logo">
                 </div>
                 <nav>
-                    <ul>
+                    <ul class="nav-menu">
                         <li><a href="">Team</a></li>
                         <li><a href="">Club</a></li>
                         <li><a href="">Shop</a></li>
                     </ul>
+                    <div class="hamburger">
+                        <div class="bars"></div>
+                        <div class="bars"></div>
+                        <div class="bars"></div>
+                    </div>
                 </nav>
             </div>
             <div class="eldor-img">
@@ -80,6 +85,14 @@
         const header = document.querySelector(".navbar");
         header.classList.toggle("sticky", window.scrollY > 0);
     })
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    hamburger.addEventListener('click', mobileMenu);
+    function mobileMenu(){
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
 </script>
 </body>
 </html>
